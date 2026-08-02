@@ -1,5 +1,20 @@
 # Claw Code
 
+> **🚀 Quick start with Bitdeer + NVIDIA NIM (no Anthropic key needed):**
+> See [`docs/providers-bitdeer-nvidia.md`](./docs/providers-bitdeer-nvidia.md) for the
+> full 5-minute setup. Bitdeer and NVIDIA NIM both expose OpenAI-compatible
+> `/v1/chat/completions` endpoints, so Claw routes to them automatically when
+> you set `OPENAI_BASE_URL` + `OPENAI_API_KEY`.
+>
+> ```bash
+> ./scripts/setup-providers.sh        # interactive setup
+> ./scripts/test-providers.sh         # smoke test all providers
+> ./target/debug/claw prompt "hello"  # you're live
+> ```
+>
+> Up to 12 NVIDIA NIM keys can be round-robined for 480 RPM aggregate
+> throughput — see `scripts/nvidia-roundrobin.py`.
+
 <p align="center">
   <a href="https://github.com/code-yeongyu/lazycodex">
     <img src="https://img.shields.io/badge/LazyCodex-codex%20for%20no--brainers-111111?style=for-the-badge&logo=github&logoColor=white" alt="LazyCodex banner" />

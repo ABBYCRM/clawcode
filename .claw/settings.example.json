@@ -1,0 +1,45 @@
+{
+  "_comment": "Example local Claw settings for Bitdeer + NVIDIA NIM. Copy to .claw/settings.local.json and fill in real keys. The .local.json path is gitignored.",
+  "model": "nvidia/meta/llama-3.1-405b-instruct",
+  "env": {
+    "OPENAI_BASE_URL": "https://integrate.api.nvidia.com/v1",
+    "OPENAI_API_KEY": "REPLACE_ME_WITH_REAL_KEY",
+    "ANTHROPIC_API_KEY": null
+  },
+  "provider_routing": {
+    "default_provider": "nvidia",
+    "providers": {
+      "nvidia": {
+        "type": "openai_compatible",
+        "base_url": "https://integrate.api.nvidia.com/v1",
+        "env_key": "NVIDIA_NIM_KEY_1",
+        "default_model": "meta/llama-3.1-405b-instruct",
+        "models": [
+          "meta/llama-3.1-405b-instruct",
+          "meta/llama-3.1-70b-instruct",
+          "qwen/qwen3-coder-480b-a35b-instruct",
+          "moonshotai/kimi-k2-instruct",
+          "mistralai/magistral-small-2506",
+          "deepseek-ai/deepseek-r1"
+        ]
+      },
+      "bitdeer": {
+        "type": "openai_compatible",
+        "base_url": "https://api-inference.bitdeer.ai/v1",
+        "env_key": "BITDEER_API_KEY",
+        "default_model": "meta/llama-3.1-70b-instruct"
+      }
+    },
+    "nvidia_nim": {
+      "key_pool_enabled": false,
+      "keys_env_prefix": "NVIDIA_NIM_KEY_",
+      "rotator_script": "scripts/nvidia-roundrobin.py"
+    }
+  },
+  "permissions": {
+    "default_mode": "acceptEdits",
+    "allow": [],
+    "deny": [],
+    "ask": []
+  }
+}

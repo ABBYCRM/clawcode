@@ -1,0 +1,20 @@
+{
+  "name": "bitdeer",
+  "display_name": "Bitdeer AI Cloud",
+  "type": "openai_compatible",
+  "base_url": "https://api-inference.bitdeer.ai/v1",
+  "env_key": "BITDEER_API_KEY",
+  "default_model": "meta/llama-3.1-70b-instruct",
+  "supports_streaming": true,
+  "supports_tool_calls": true,
+  "signup_url": "https://www.bitdeer.ai/",
+  "docs": "https://www.bitdeer.ai/en/services/ai-inference",
+  "models": [
+    "meta/llama-3.1-70b-instruct",
+    "meta/llama-3.1-405b-instruct",
+    "qwen/qwen2.5-72b-instruct",
+    "mistralai/mistral-large-2-instruct",
+    "deepseek-ai/deepseek-v3",
+    "bytedance/seed-oss-36b-instruct"
+  ]
+}
