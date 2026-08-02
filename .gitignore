@@ -13,3 +13,7 @@ archive/
 status-help.txt
 # Legacy Python port session scratch artifacts
 .port_sessions/
+# Local provider secrets (NEVER commit — added 2026-08-02 with Bitdeer+NVIDIA setup)
+.env
+.env.local
+*.env.local
